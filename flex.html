@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <style>
+        .container-1 {
+            display:flex;
+            flex-direction: column;
+            align-items: center; /* 전체 높이만큼 */
+            justify-content: space-evenly; /*너비를 균등하게 나눠가짐 */
+        }
+
+        .container-1 > div {
+            border: 3px solid red;
+            max-width: 200px;
+        }
+
+        .box-1 {
+            flex:1;
+            order: 2;
+        }
+
+        .box-2 {
+            flex:2;
+            order: 1;
+        }
+
+        .box-3 {
+            flex:1;
+            order: 3
+        }
+    </style>
+</head>
+<body>
+    <div class="container-1">
+        <div class="box-1">
+            <h3>Box1</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, labore.</p>
+        </div>
+        <div class="box-2">
+            <h3>Box2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi fugiat, dolorum quo iste eaque commodi incidunt voluptatem labore praesentium ea earum veritatis alias nisi recusandae voluptatum maiores quisquam ipsam minima vero aut impedit omnis iusto. Autem harum nulla distinctio corporis! Dolore eveniet architecto, sunt quo blanditiis a repellendus nobis tenetur?</p>
+        </div>
+        <div class="box-3">
+            <h3>Box3</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, labore.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+h2 {
+    color: blue;
+}
+
+div {
+    font-size: 2rem;
+}
+
+body > p {
+    color: gold;
+}

@@ -1,0 +1,11 @@
+@import './config';
+button {
+    display: inline-block;
+    border-radius: 10px;
+    padding: 8px 20px;
+    margin: 50px;
+    color: $primary-text;
+    button:hover {
+        transform: scale(0.9);
+    }
+}

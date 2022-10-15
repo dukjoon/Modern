@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        .wrapper {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /*한 줄 정렬(비율)*/
+            grid-gap: 10px;
+            grid-auto-rows: minmax(500px,500px);
+        }
+        .wrapper > div {
+            background-color: gold;
+            padding: 16px;
+        }
+        .wrapper>div:nth-child(odd) {
+            background-color: grey;
+            padding: 16px;
+        }
+
+        .item1 {
+            grid-column: 1/5;
+        }
+
+        .item4 {
+            grid-column: 1/3;
+            grid-row: 2/3;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="item item1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ipsam laudantium quas. Doloremque voluptatibus placeat minima assumenda? Saepe, maiores perspiciatis!</div>
+        <div class="item item2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati temporibus distinctio ullam, nihil magnam vel sequi itaque cupiditate quia rem.</div>
+        <div class="item item3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente harum adipisci natus incidunt maxime accusantium repudiandae, soluta aliquam consequatur tempore.</div>
+        <div class="item item4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, debitis! Quos nesciunt velit numquam dolor distinctio unde ducimus dolores praesentium.</div>
+    </div>
+</body>
+</html>
