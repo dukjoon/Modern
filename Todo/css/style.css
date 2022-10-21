@@ -43,6 +43,15 @@ header {
     flex: 8
 }
 
+.done .todo-item {
+    text-decoration: line-through;
+    color: grey;
+}
+
+.done .check {
+    visibility: hidden;
+}
+
 .todo-manage {
     flex: 1;
     display: flex;

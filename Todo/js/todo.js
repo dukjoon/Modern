@@ -28,6 +28,13 @@ const generateLike = () => {
     icon.classList.add("like");
     icon.innerText = "favorite_border";
     span.appendChild(icon);
+    span.addEventListener("click", () => {
+        if(icon.innerText === 'favorite_border') {
+            icon.innerText = "favorite"
+        } else {
+            icon.innerText = "favorite_border"
+        }
+    })
     console.log(span);
     return span;
 }
@@ -50,6 +57,17 @@ const generateManage = () => {
     icon2.classList.add("material-icons");
     icon2.classList.add("clear");
     icon2.innerText = "clear";
+
+    icon1.addEventListener("click", (e) => {
+        const li = e.target.parentNode.parentNode;
+        li.classList.add('done');
+        console.log(li);
+    })
+
+    icon2.addEventListener("click", (e) => {
+        const li = e.target.parentNode.parentNode;
+        todoList.removeChild(li);
+    })
     span.appendChild(icon1);
     span.appendChild(icon2);
     return span;
