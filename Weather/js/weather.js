@@ -7,14 +7,14 @@ const weatherSelect = document.querySelector("#weather-sele ct");
 const info = document.querySelector(".info");
 
 
-weatherSelect.addEventListener('change', (e) => {
-    getWeather(e.target.value);
-})
+// weatherSelect.addEventListener('change', (e) => {
+//     getWeather(e.target.value);
+// })
 
 const getWeather = async (lat = 37.541, lon = 126.986) => {
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}`
     const response = await axios.get(url);
-
+    
     const { name, main, weather, wind } = response.data;
     locationDisplay.innerText = name;
     temperatureDisplay.innerText = transferTemperature(main.temp);

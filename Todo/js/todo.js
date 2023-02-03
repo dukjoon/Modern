@@ -72,7 +72,3 @@ const generateManage = () => {
     span.appendChild(icon2);
     return span;
 }
-
-
-
-
